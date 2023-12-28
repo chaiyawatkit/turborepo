@@ -3,11 +3,11 @@ import { api } from 'libs'
 
 
 export default async function Page() {
-    const { data, error } = await api.nendoroid.skadi.get()
+    // const { data, error } = await api.nendoroid.skadi.get()
 
-    if (error) return <h1>Something went wrong</h1>
-
-    const { id, name, cover, type, license } = data
+    // if (error) return <h1>Something went wrong</h1>
+    //
+    // const { id, name, cover, type, license } = data
 
     return (
         <main className="flex justify-center items-center w-full min-h-screen">
@@ -17,11 +17,11 @@ export default async function Page() {
                         <small className="text-gray-400 text-sm font-light">
                             {/*Nendoroid: {id}*/}
                         </small>
-                        <h1 className="text-5xl text-gray-600">{name}</h1>
+                        <h1 className="text-5xl text-gray-600">{'test'}</h1>
                     </div>
                     <div className="relative">
                         <p className="text-right text-gray-500 font-light">
-                            {license.from}
+                            {'test'}
                         </p>
                         <h4
                             className="z-[-10] text-[24em] absolute bottom-[-6rem] left-[-18rem] text-white font-semibold pointer-events-none"
