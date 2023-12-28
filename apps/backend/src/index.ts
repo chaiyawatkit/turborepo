@@ -3,6 +3,7 @@ import { cors } from '@elysiajs/cors'
 import { staticPlugin } from '@elysiajs/static'
 import { swagger } from '@elysiajs/swagger'
 
+
 const app = new Elysia()
     .use(cors())
     .use(swagger())
@@ -13,17 +14,18 @@ const app = new Elysia()
     )
     .get('/', () => 'Hello Elysia')
     .get('/nendoroid/skadi', () => ({
-        id: 1895,
-        name: 'Skadi',
+        id: 101,
+        name: 'TEST',
         type: 'Nendoroid',
         manufacture: 'Goodsmile',
         cover: `http://localhost:3000/assets/skadi.jpg`,
         license: {
             type: 'approved',
             holder: 'Hypergraph',
-            from: 'Arknights'
+            from: 'Developer',
         }
     }))
+    // @ts-ignore
     .post('/sign-in', ({ body }) => body, {
         body: t.Object({
             username: t.String(),

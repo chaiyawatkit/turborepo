@@ -1,4 +1,6 @@
+
 import { api } from 'libs'
+
 
 export default async function Page() {
     const { data, error } = await api.nendoroid.skadi.get()
@@ -13,7 +15,7 @@ export default async function Page() {
                 <header className="flex flex-col justify-between">
                     <div className="flex flex-col items-end gap-1">
                         <small className="text-gray-400 text-sm font-light">
-                            Nendoroid: {id}
+                            {/*Nendoroid: {id}*/}
                         </small>
                         <h1 className="text-5xl text-gray-600">{name}</h1>
                     </div>
@@ -31,16 +33,16 @@ export default async function Page() {
                                 1px 1px 0 #000`
                             }}
                         >
-                            {id}
+                            {/*{id}*/}
                         </h4>
                     </div>
                 </header>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                    src={cover}
-                    alt={`${name} ${type}`}
-                    className="z-10 rounded-2xl drop-shadow-2xl object-fit object-contain"
-                />
+                {/*<img*/}
+                {/*    src={cover}*/}
+                {/*    alt={`${name} ${type}`}*/}
+                {/*    className="z-10 rounded-2xl drop-shadow-2xl object-fit object-contain"*/}
+                {/*/>*/}
             </article>
         </main>
     )
